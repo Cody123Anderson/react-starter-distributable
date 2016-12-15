@@ -1,0 +1,60 @@
+{
+  "name": "react-landing-page",
+  "version": "1.0.0",
+  "description": "React landing page that captures email addresses and adds them to an email list",
+  "main": "server.js",
+  "scripts": {
+    "dev": "export NODE_ENV=development && ./node_modules/.bin/webpack --watch --progress",
+    "dockerbuild": "docker build -t cody123anderson/serenade-landing-page .",
+    "dockerrun": "docker run --name serenade-landing-page -p 3000:3000 -d cody123anderson/serenade-landing-page",
+    "dockerpush": "docker push cody123anderson/serenade-landing-page",
+    "start": "PORT=3000 node server.js",
+    "test": "mocha --compilers js:babel-core/register --require ignore-styles --recursive ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cody123Anderson/react-landing-page.git"
+  },
+  "keywords": [
+    "react",
+    "landing",
+    "page",
+    "sendgrid"
+  ],
+  "author": "cody123anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cody123Anderson/react-landing-page/issues"
+  },
+  "homepage": "https://github.com/Cody123Anderson/react-landing-page#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.10.2",
+    "eslint-plugin-react": "^6.7.1",
+    "postcss-loader": "^1.1.1",
+    "postcss-modules-values": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.3",
+    "express": "^4.14.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-icons": "^2.2.1",
+    "react-select": "^1.0.0-rc.2",
+    "sendgrid": "^4.7.1",
+    "sendgrid-rest": "^2.3.0",
+    "serve-favicon": "^2.3.2"
+  }
+}
