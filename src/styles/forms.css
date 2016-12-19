@@ -16,6 +16,7 @@
 
 .select {
   display: inline-block;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -23,11 +24,6 @@
   border: none;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
-}
-
-.select > div > span > div {
-  padding-left: 0 !important;
-  padding-right: 37px !important;
 }
 
 .select > div > span > div > span {
@@ -40,6 +36,7 @@
   }
 
   .select {
+    margin-top: 0;
     width: 200px;
   }
 }
