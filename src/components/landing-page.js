@@ -5,9 +5,9 @@ import 'react-select/dist/react-select.css';
 import FaInstagram from 'react-icons/lib/fa/instagram';
 import FaFacebook from 'react-icons/lib/fa/facebook';
 
-import styles from '../../styles/environment/landing-page.css';
-import buttons from '../../styles/buttons.css';
-import forms from '../../styles/forms.css';
+import styles from '../styles/components/landing-page.css';
+import buttons from '../styles/buttons.css';
+import forms from '../styles/forms.css';
 
 const selectOptions = [
   { value: 'Utah - Salt Lake City', label: 'Salt Lake City' },
@@ -47,7 +47,7 @@ export default class LandingPage extends Component {
       state: this.state.state
     };
 
-    axios.post('/subscriber', body)
+    axios.post('http://api.serenadedates.com/subscriber', body)
     .then(() => {
       this.setState({
         email: '',
@@ -113,7 +113,7 @@ export default class LandingPage extends Component {
             <div className={this.state.showThanks ? '' : styles.hidden}>
               <div className={styles.title}>Thanks for Signing Up!</div>
               <div className={styles.subtitle}>
-                You now have 10 entries to every date giveaway that we do. Follow us on social to get even more opportunities to win!
+                You're now automatically entered to win any giveaways in your area. Follow us on social for even more opportunities to win!
               </div>
               <a href="https://www.instagram.com/serenade_dates/" className={styles.socialIcon}>
                 <FaInstagram />

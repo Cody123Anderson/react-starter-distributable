@@ -2,12 +2,11 @@ var webpack = require('webpack');
 var values = require('postcss-modules-values');
 var env = process.env.NODE_ENV || 'development';
 var minify = env === 'production';
-var path = require('path');
 
 var config = {
   context: __dirname,
   devtool: minify ? 'cheap-module-source-map' : 'eval',
-  entry: './src/components/environment/app.js',
+  entry: './src/components/app.js',
   output: {
     path: __dirname + '/dist',
     filename: minify ? 'index.js' : 'index-dev.js'

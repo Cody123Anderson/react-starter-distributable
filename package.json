@@ -5,10 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "export NODE_ENV=development && ./node_modules/.bin/webpack --watch --progress",
-    "dockerbuild": "docker build -t cody123anderson/serenade-landing-page .",
-    "dockerrun": "docker run --name serenade-landing-page -p 3000:3000 -d cody123anderson/serenade-landing-page",
-    "dockerpush": "docker push cody123anderson/serenade-landing-page",
-    "start": "PORT=3000 node server.js",
+    "production": "export NODE_ENV=production && ./node_modules/.bin/webpack --progress",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress",
     "test": "mocha --compilers js:babel-core/register --require ignore-styles --recursive ./test"
   },
   "repository": {
