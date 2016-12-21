@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import FaInstagram from 'react-icons/lib/fa/instagram';
 import FaFacebook from 'react-icons/lib/fa/facebook';
 
-import styles from '../styles/components/landing-page.css';
-import buttons from '../styles/buttons.css';
-import forms from '../styles/forms.css';
+import styles from '../../styles/level2/landing-page.css';
+import buttons from '../../styles/buttons.css';
+import forms from '../../styles/forms.css';
+import InputSelect from '../level5/input-select';
 
 const selectOptions = [
   { value: 'Utah - Salt Lake City', label: 'Salt Lake City' },
@@ -64,12 +64,20 @@ export default class LandingPage extends Component {
   }
 
   onLocationChange(location) {
-    const locations = location.value.split(' - ');
-    this.setState({
-      location: location.value,
-      region: locations[1],
-      state: locations[0]
-    });
+    if (location) {
+      const locations = location.value.split(' - ');
+      this.setState({
+        location: location.value,
+        region: locations[1],
+        state: locations[0]
+      });
+    } else {
+      this.setState({
+        location: null,
+        region: null,
+        state: null
+      });
+    }
   }
 
   render() {
@@ -93,13 +101,13 @@ export default class LandingPage extends Component {
                   placeholder="Email"
                   onChange={(e) => this.onEmailChange(e)}
                   value={this.state.email} />
-                <Select
-                  className={forms.select}
+                <InputSelect
                   value={this.state.location}
                   options={selectOptions}
-                  onChange={this.onLocationChange}
-                  placeholder="Select location..."
+                  onValueChange={this.onLocationChange}
+                  placeholder={'Select location...'}
                   searchable={false}
+                  type={'inline'}
                 />
                 <button
                   disabled={this.state.region && this.state.email && this.state.submitPossible ? false : true}
@@ -111,7 +119,7 @@ export default class LandingPage extends Component {
               </form>
             </div>
             <div className={this.state.showThanks ? '' : styles.hidden}>
-              <div className={styles.title}>Thanks for Signing Up!</div>
+              <div className={styles.title}>Welcome!</div>
               <div className={styles.subtitle}>
                 You're now automatically entered to win any giveaways in your area. Follow us on social for even more opportunities to win!
               </div>

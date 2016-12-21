@@ -1,0 +1,45 @@
+/* import variables */
+@value variables: '../variables.css';
+@value borderRadius from variables;
+
+.select {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.inline {
+  composes: select;
+}
+
+.normal {
+  composes: select;
+}
+
+.inline > div {
+  border: none;
+  border-radius: borderRadius;
+}
+
+.normal > div {
+  border: none;
+  border-radius: borderRadius;
+}
+
+.inline > div > span > div > span,
+.normal > div > span > div > span {
+  line-height: 36px;
+}
+
+@media(min-width: 768px) {
+  .inline {
+    margin-top: 0;
+    width: 200px;
+  }
+
+  .inline > div {
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+  }
+}
