@@ -140,7 +140,7 @@ export default class LandingPage extends Component {
                 </form>
               </div>
               <div className={this.state.showThanks ? '' : styles.hidden}>
-                <div className={styles.title}>Welcome!</div>
+                <div className={styles.title}>Thanks for Signing Up!</div>
                 <div className={styles.subtitle}>
                   You're now automatically entered to win any giveaways in your area. Follow us on social for even more opportunities to win!
                 </div>
