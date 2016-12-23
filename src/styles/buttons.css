@@ -1,13 +1,14 @@
 /* import variables */
 @value variables: './variables.css';
-@value borderRadius, formElementHeight, red, redHover from variables;
+@value borderRadius, red, redHover from variables;
 
 .btn {
   display: inline-block;
   border: none;
   border-radius: borderRadius;
   font-size: 14px;
-  height: formElementHeight;
+  padding: 9px 15px 8px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -37,4 +38,9 @@
   background-color: #FFA8AB;
   border: 1px solid #FFA8AB;
   cursor: default;
+}
+
+.btnRedLarge {
+  composes: btnRed;
+  padding: 15px 20px;
 }
