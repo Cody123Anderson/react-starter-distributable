@@ -1,0 +1,3 @@
+/* import variables */
+@value variables: '../variables.css';
+@value borderRadius, gray, red, minWidth from variables;
