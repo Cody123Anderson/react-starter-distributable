@@ -1,9 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 
-import HomePage from '../level2/home-page';
+import TopBar from '../level3/top-bar.js';
 
-const mountNode = document.createElement('div');
-
-document.body.appendChild(mountNode);
-ReactDOM.render(<HomePage />, mountNode);
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <TopBar />
+        Hello World
+      </div>
+    );
+  }
+}

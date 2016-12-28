@@ -6,7 +6,7 @@ var minify = env === 'production';
 var config = {
   context: __dirname,
   devtool: minify ? 'cheap-module-source-map' : 'eval',
-  entry: './src/components/level1/app.js',
+  entry: './src/components/level1/index.js',
   output: {
     path: __dirname + '/dist',
     filename: minify ? 'index.js' : 'index-dev.js'
