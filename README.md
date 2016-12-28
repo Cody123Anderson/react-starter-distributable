@@ -1,2 +1,2 @@
-# serenade-admin
-client-side react application for admin portal
+# react-starter
+ReactJS and CSS Modules starter app
