@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-import TopBar from '../level3/top-bar.js';
+import './app.scss';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <TopBar />
-        Hello World
+      <div className="app">
+        {this.props.children}
       </div>
     );
   }

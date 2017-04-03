@@ -3,4 +3,4 @@ dist/
 **/npm-debug.**
 **/*.pid
 **/*.log
-**/DS_Store*
+**/*DS_Store*

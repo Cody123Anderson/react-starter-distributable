@@ -5,6 +5,15 @@ module.exports = {
         "es6": true,
         "node": true
     },
+    "globals": {
+      "afterAll": true,
+      "afterEach": true,
+      "beforeAll": true,
+      "beforeEach": true,
+      "describe": false,
+      "expect": false,
+      "it": false
+    },
     "extends": "eslint:recommended",
     "installedESLint": true,
     "parserOptions": {
@@ -19,8 +28,10 @@ module.exports = {
     ],
     "rules": {
         "indent": [2, 2, {"SwitchCase": 1}],
-        "no-console": ["error", { allow: ["warn", "error", "info"] }],
-        "no-use-before-define": 0,
+        "no-console": [
+            "error",
+            { allow: ["warn", "error"] }
+        ],
         "quotes": [
             "error",
             "single"
