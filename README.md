@@ -1,14 +1,15 @@
 # React Starter Distributable  
-React Starter application meant to be imported into other react applications  
+React Starter application for distributable components (i.e. they will be imported into other React applications).
+This is meant to be forked and used to build other npm packages.    
 
-# Usage  
+# Example Usage  
 ```javascript
-// Install package - make sure to specify the correct version in the hash
-yarn add -S https://github.com/Cody123Anderson/react-starter-distributable.git#1.0.0 // Yarn
+// Install package
+yarn add react-starter-distributable // Yarn
 
 // OR
 
-npm install -S https://github.com/Cody123Anderson/react-starter-distributable.git#1.0.0 // NPM
+npm install -S react-starter-distributable // NPM
 
 // Import the component into your js/jsx file
 import { ReactStarterDistributable } from 'react-starter-distributable';
@@ -18,7 +19,7 @@ import { ReactStarterDistributable } from 'react-starter-distributable';
 ```
 
 
-# Hacking on the Application  
+# Scripts Available for Development
 You will need a global installation of yarn to run these commands.  
 
 ```javascript
@@ -36,18 +37,10 @@ yarn run test // Runs the tests on the components - see https://github.com/produ
 ```
 
 
-## Before Pushing Code  
-Bump version in package.json  
+# Hacking on This Project  
+Fork this repository and use the same scripts as listed above. Once you've made your changes, just submit
+a pull request to the master branch of the master repository.
 
-Then:  
+## Make sure to:  
+Run this command before committing code:  
 `yarn run prod` - Builds production bundle.js files  
-
-## After Pushing Code  
-Tag the last commit locally with a version number:  
-`git tag -a <new version number> -m <"tag message here"> <id of commit that you're tagging>`   
-
-An example would be:  
-`git tag -a 1.0.1 -m "updated styling on example component" alsdkjf012fasdf23f3434`  
-
-Then Push the tag to the remote git repository:  
-`git push origin --tags`  
