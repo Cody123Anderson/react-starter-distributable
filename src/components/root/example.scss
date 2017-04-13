@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.react-starter-distributable {
+  .example {
+    background-color: $black-90;
+    display: inline-block;
+    color: $white;
+    padding: 15px;
+  }
+}

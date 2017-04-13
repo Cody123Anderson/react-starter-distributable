@@ -1,22 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { Router, hashHistory } from 'react-router';
-import thunk from 'redux-thunk';
+/* Export all distributable components in this file */
 
-import rootReducer from '../../reducers';
-import routes from './routes';
+import React, { Component } from 'react';
 
-// Create Redux Store
-const store = createStore(rootReducer, applyMiddleware(thunk));
+import './index.scss';
+import Example from './example';
 
-// Create a DOM Node to mount the React Application to
-const mountNode = document.createElement('div');
-document.body.appendChild(mountNode);
-
-// Render the Application on the new DOM Node
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={hashHistory} routes={routes} />
-  </Provider>, mountNode);
+export class ReactStarterDistributable extends Component {
+  render() {
+    return (
+      <div className="react-starter-distributable">
+        <Example />
+      </div>
+    );
+  }
+}

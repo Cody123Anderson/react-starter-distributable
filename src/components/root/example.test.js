@@ -3,13 +3,13 @@ import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { shallow } from 'enzyme';
 
-import App from './app';
+import Example from './example';
 
 chai.use(chaiEnzyme());
 
-describe('App', () => {
+describe('Example', () => {
   it('shows the correct className', () => {
-    let wrapper = shallow(<App />);
-    expect(wrapper).to.have.className('app');
+    let wrapper = shallow(<Example />);
+    expect(wrapper).to.have.className('example');
   });
 });

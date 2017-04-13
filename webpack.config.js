@@ -5,22 +5,25 @@ let filename = 'bundle.js';
 let devtool = 'source-map';
 let plugins = [
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.NPM_PACKAGE_VERSION': JSON.stringify(process.env.npm_package_version)
   })
 ];
 
-if (process.env.NODE_ENV === 'development' || process.env.BUILD_OUTPUT === 'development') {
+if (process.env.NODE_ENV === 'development') {
   filename = 'bundle-dev.js';
   devtool = 'eval-source-map';
 }
 
 const config = {
-  devtool: devtool,
   entry: './src/components/root/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: filename
+    filename: filename,
+    library: 'shared-components',
+    libraryTarget: 'umd'
   },
+  devtool: devtool,
   module: {
     rules: [
       {
@@ -43,14 +46,30 @@ const config = {
         ]
       },
       {
-        test: /\.json$/,
-        use: 'json-loader'
-      },
-      {
-        test: /\.(ttf|eot|svg|jpg|png|woff|woff2)$/,
+        test: /\.(ttf|eot|svg|jpg|png|woff)$/,
         use: 'url-loader'
       }
     ]
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom'
+    },
+    lodash: {
+      root: '_',
+      commonjs2: 'lodash',
+      commonjs: 'lodash',
+      amd: 'lodash'
+    }
   },
   plugins: plugins
 };

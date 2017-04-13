@@ -1,31 +1,18 @@
 // Colors
 $black: #000;
 $black-90: #191919;
-$black-80: rgba(0, 0, 0, .8);
-$black-70: rgba(0, 0, 0, .7);
-$black-60: rgba(0, 0, 0, .6);
-$black-50: rgba(0, 0, 0, .5);
-$black-40: rgba(0, 0, 0, .4);
-$black-30: rgba(0, 0, 0, .3);
-$black-20: rgba(0, 0, 0, .2);
+$black-80: #333333;
+$black-70: #4C4C4C;
+$black-60: #666666;
+$black-50: #808080;
+$black-40: #999999;
+$black-30: #B3B3B3;
+$black-20: #CCCCCC;
 $black-10: #E4E4E4;
-$black-5: rgba(0, 0, 0, .05);
+$black-5: #F3F3F3;
 $white: #fff;
-$white-90: rgba(255, 255, 255, .9);
-$white-80: rgba(255, 255, 255, .8);
-$white-70: rgba(255, 255, 255, .7);
-$white-60: rgba(255, 255, 255, .6);
-$white-50: rgba(255, 255, 255, .5);
-$white-40: rgba(255, 255, 255, .4);
-$white-30: rgba(255, 255, 255, .3);
-$white-20: rgba(255, 255, 255, .2);
-$white-10: rgba(255, 255, 255, .1);
-$white-5: rgba(255, 255, 255, .05);
 $error-text: rgba(255, 113, 117, .8);
 $error-background: rgba(255, 113, 117, .3);
-
-// Positioning
-$min-width: 0;
 
 // Borders
 $border-radius: 4px;
