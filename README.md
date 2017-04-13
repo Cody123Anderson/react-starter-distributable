@@ -39,8 +39,7 @@ yarn run test // Runs the tests on the components - see https://github.com/produ
 
 # Hacking on This Project  
 Fork this repository and use the same scripts as listed above. Once you've made your changes, just submit
-a pull request to the master branch of the master repository.
+a pull request to the master branch of the master repository.  
 
-## Make sure to:  
-Run this command before committing code:  
+Make sure to run this command before committing code:  
 `yarn run prod` - Builds production bundle.js files  
