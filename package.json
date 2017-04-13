@@ -1,6 +1,6 @@
 {
   "name": "react-starter-distributable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Distributable Starter Application",
   "main": "dist/bundle.js",
   "scripts": {
